@@ -6,7 +6,6 @@ const isPublicRoute = createRouteMatcher([
 )
 
 export default clerkMiddleware((auth, req) => {
-  console.log('middleware', req.url);
   if (isPublicRoute(req)) {
     return;
   }
